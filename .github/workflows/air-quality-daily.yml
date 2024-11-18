@@ -30,7 +30,6 @@ jobs:
           
       - name: Install hsfs with Kafka disabled
         run: |
-          pip install hsfs[python]
           pip uninstall confluent-kafka -y
           
       - name: Set environment variable to disable Kafka
