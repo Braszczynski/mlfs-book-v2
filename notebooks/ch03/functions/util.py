@@ -275,6 +275,7 @@ def purge_project(proj):
     delete_feature_groups(fs, "air_quality")
     delete_feature_groups(fs, "weather")
     delete_feature_groups(fs, "aq_predictions")
+    delete_feature_groups(fs, "air_quality_lagged")
 
     # Delete all Models
     delete_models(mr, "air_quality_xgboost_model")
