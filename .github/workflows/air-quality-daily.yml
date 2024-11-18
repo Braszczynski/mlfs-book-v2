@@ -21,16 +21,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip'
       - name: install python packages
         run: |
           cd notebooks/ch03
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
-      - name: Install hsfs with Kafka disabled
-        run: |
-          pip uninstall confluent-kafka -y
           
       - name: Set environment variable to disable Kafka
         run: echo "HOPSWORKS_DISABLE_KAFKA=True" >> $GITHUB_ENV
