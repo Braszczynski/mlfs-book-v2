@@ -2,8 +2,8 @@ name: air-quality-lagged-daily
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '11 7 * * *'
+  # schedule:
+  #   - cron: '11 7 * * *'
 
 jobs:
   schedule_pipelines:
